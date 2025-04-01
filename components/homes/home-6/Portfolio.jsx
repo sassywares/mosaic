@@ -27,7 +27,7 @@ export default function Portfolio() {
   return (
     <>
       {/* Works Filter */}
-      <div className="works-filter works-filter-fancy text-center mb-60 mb-sm-40 z-1">
+      {/* <div className="works-filter works-filter-fancy text-center mb-60 mb-sm-40 z-1">
         {filters.map((elm, i) => (
           <a
             onClick={() => setCurrentCategory(elm.category)}
@@ -39,7 +39,7 @@ export default function Portfolio() {
             {elm.name}
           </a>
         ))}
-      </div>
+      </div> */}
       {/* End Works Filter */}
       <div className="position-relative">
         {/* Decorative Waves */}
@@ -78,10 +78,7 @@ export default function Portfolio() {
                       height={524}
                     >
                       {({ ref, open }) => (
-                        <a
-                          onClick={open}
-                          className={"work-lightbox-link mfp-image"}
-                        >
+                        <a href="#" className={"work-lightbox-link mfp-image"}>
                           <div className="work-img">
                             <Image
                               ref={ref}
@@ -99,10 +96,7 @@ export default function Portfolio() {
                       )}
                     </Item>
                   ) : (
-                    <Link
-                      href={`/fancy-portfolio-single/${item.id}`}
-                      className={"work-ext-link"}
-                    >
+                    <a href="#" className={"work-ext-link"}>
                       <div className="work-img">
                         <Image
                           src={item.imgSrc}
@@ -115,7 +109,7 @@ export default function Portfolio() {
                         <h3 className="work-title">{item.title}</h3>
                         <div className="work-descr">{item.description}</div>
                       </div>
-                    </Link>
+                    </a>
                   )}
                 </div>
               </li>
@@ -124,21 +118,6 @@ export default function Portfolio() {
           {/* End Work Item */}
         </ul>
         {/* End Works Grid */}
-      </div>
-      <div className="small text-gray text-center mt-60 mt-sm-40">
-        Free Images by{" "}
-        <a href="asylab.com" rel="noopener nofollow" target="_blank">
-          asylab.com
-        </a>
-        ,{" "}
-        <a href="ui8.net " rel="noopener nofollow" target="_blank">
-          ui8.net
-        </a>{" "}
-        , and{" "}
-        <a href="freeui.design" rel="noopener nofollow" target="_blank">
-          freeui.design
-        </a>
-        .
       </div>
     </>
   );

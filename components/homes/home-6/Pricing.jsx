@@ -11,14 +11,15 @@ export default function Pricing() {
         <div className="col-md-8 offset-md-2 text-center">
           <h2 className="section-caption-fancy mb-20 mb-xs-10">Our Pricing</h2>
           <h3 className="section-title mb-0">
-            Get the power of the professional services with the simple price.
+            Push your brand to its full potential with a plan that fits your
+            needs.
           </h3>
         </div>
       </div>
       <div className="row">
         <div className="col-xl-10 offset-xl-1">
           {/* Nav Tabs */}
-          <div className="mb-60 mb-sm-40 text-center">
+          {/* <div className="mb-60 mb-sm-40 text-center">
             <ul
               className="nav nav-tabs tpl-minimal-tabs animate"
               role="tablist"
@@ -59,7 +60,7 @@ export default function Pricing() {
             <div className="small text-gray mt-10">
               Save up to <strong>15%</strong> with Annual Plan.
             </div>
-          </div>
+          </div> */}
           {/* End Nav Tabs */}
           {/* Tab panes */}
           <div className="tab-content tpl-minimal-tabs-cont position-relative wow fadeInUp">
@@ -115,9 +116,7 @@ export default function Pricing() {
                           <h4 className="pricing-title">{elm.title}</h4>
                           <div className="pricing-num">
                             <sup>$</sup>
-                            {isYearly
-                              ? Math.round((elm.price * 12 * 75) / 100)
-                              : elm.price}
+                            {elm.price}
                           </div>
                           <div className="pr-per">
                             {isYearly ? "per year" : "per month"}
@@ -126,7 +125,7 @@ export default function Pricing() {
                             <ul className="pr-list">
                               {elm.features.map((elm, i) => (
                                 <li key={i}>
-                                  <i className="mi-check color-primary-1" /> 1
+                                  <i className="me-1 mi-check color-primary-1" />
                                   {elm}
                                 </li>
                               ))}
@@ -139,7 +138,8 @@ export default function Pricing() {
                           </div>
                           <div className="mt-auto local-scroll">
                             <a
-                              href="#"
+                              href={`https://sassywares.com/pricing?plan=${elm.title}&utm_source=mosaic-digital-agency&utm_medium=website`}
+                              target="_blank"
                               className="btn btn-mod btn-color btn-medium btn-round btn-hover-anim btn-full"
                             >
                               <span>Buy {elm.title}</span>

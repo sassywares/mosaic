@@ -4,12 +4,17 @@ import { brands } from "@/data/brands";
 import { numberItems2 } from "@/data/facts";
 import { testimonials5 } from "@/data/testimonials";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useCountUp } from "@/hooks/useCountUp";
+import AnimatedNumber from "@/components/common/AnimatedNumber";
 
 export default function Testimonials() {
   const isotopContainer = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+  const numbersRef = useRef(null);
+
   const initIsotop = async () => {
     const Isotope = (await import("isotope-layout")).default;
     const imagesloaded = (await import("imagesloaded")).default;
@@ -30,6 +35,22 @@ export default function Testimonials() {
     // Magnate Animation
 
     initIsotop();
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (numbersRef.current) {
+      observer.observe(numbersRef.current);
+    }
+
+    return () => observer.disconnect();
   }, []);
   return (
     <div className="container position-relative">
@@ -41,16 +62,14 @@ export default function Testimonials() {
               Testimonials
             </h2>
             <h3 className="section-title-small mb-30">
-              We help brands to stand out in the ever-changing digital
-              landscape.
+              We love brands and brands love us. It's a match made in heaven.
             </h3>
             <p className="section-descr mb-30">
-              A static website stores a unique file for every page of a static
-              website. Each time that page is requested, the same content is
-              returned.
+              Most of our clients are referrals. Brands trust us, return, and
+              bring friends.
             </p>
             {/* Numbers */}
-            <div className="row">
+            <div className="row" ref={numbersRef}>
               {numberItems2.map((item, index) => (
                 <div
                   key={index}
@@ -58,7 +77,13 @@ export default function Testimonials() {
                     !index ? "mb-sm-10" : ""
                   }`}
                 >
-                  <div className="number-1-title">{item.title}</div>
+                  <div className="number-1-title">
+                    <AnimatedNumber
+                      isVisible={isVisible}
+                      number={parseInt(item.title.replace(/\D/g, ""))}
+                      suffix={item.title.replace(/[0-9]/g, "")}
+                    />
+                  </div>
                   <div className="number-1-descr">{item.description}</div>
                 </div>
               ))}
@@ -126,6 +151,7 @@ export default function Testimonials() {
       <div className="page-section pb-0 text-center">
         <h3 className="section-title-tiny">Trusted by Leading Companies</h3>
         <Swiper
+          loop
           spaceBetween={0}
           slidesPerView={6}
           watchSlidesProgress
@@ -154,7 +180,6 @@ export default function Testimonials() {
             display: "block",
           }}
         >
-          {/* Team item */}
           {brands.map((elm, i) => (
             <SwiperSlide className="owl-item" key={i}>
               <div className="logo-item">
@@ -162,8 +187,6 @@ export default function Testimonials() {
               </div>
             </SwiperSlide>
           ))}
-
-          {/* End Team item */}
         </Swiper>
       </div>
       {/* End Logotypes */}

@@ -1,8 +1,46 @@
 "use client";
-import { contactItems } from "@/data/contact";
+
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 export default function Contact() {
+  async function onFormSubmit(e) {
+    e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const message = formData.get("message");
+
+    if (!name) {
+      alert("Please enter your name");
+      return;
+    }
+
+    if (!email) {
+      alert("Please enter your email");
+      return;
+    }
+
+    if (!message) {
+      alert("Please enter your message");
+      return;
+    }
+
+    alert("Thank you for contacting us. We will get back to you soon.");
+
+    try {
+      await fetch("https://api.sassywares.com/contact", {
+        body: JSON.stringify({ name, email, message }),
+        method: "POST",
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="container position-relative">
       <div className="row">
@@ -10,83 +48,33 @@ export default function Contact() {
         <div className="col-lg-4 mb-md-50 mb-sm-30 position-relative z-index-1">
           <h2 className="section-caption-fancy mb-20 mb-xs-10">Contact Us</h2>
           <h3 className="section-title mb-50 mb-sm-30">
-            We’re open to talk to good people.
+            We're open when you need us.
           </h3>
-          {/* Contact Information */}
-          <div className="row">
-            <div className="col-md-11">
-              {/* Address */}
-
-              {contactItems.map((item, index) => (
-                <React.Fragment key={index}>
-                  <div
-                    className={`contact-item ${
-                      index !== 3 ? "mb-40 mb-sm-20" : ""
-                    }`}
-                  >
-                    <div className="ci-icon">
-                      <i className={item.iconClass} />
-                    </div>
-                    <h4 className="ci-title  visually-hidden">{item.title}</h4>
-                    <div className="ci-text">{item.text}</div>
-                    <div>
-                      <a
-                        href={item.link.url}
-                        target={item.link.target}
-                        rel={item.link.rel}
-                        className="link-hover-anim"
-                        data-link-animate="y"
-                      >
-                        <span className="link-strong link-strong-unhovered">
-                          {item.link.text}{" "}
-                          <i
-                            className="mi-arrow-right size-18"
-                            aria-hidden="true"
-                          ></i>
-                        </span>
-                        <span
-                          className="link-strong link-strong-hovered"
-                          aria-hidden="true"
-                        >
-                          {item.link.text}{" "}
-                          <i
-                            className="mi-arrow-right size-18"
-                            aria-hidden="true"
-                          ></i>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </React.Fragment>
-              ))}
-              {/* End Phone */}
+          {/* Decorative Image */}
+          <div className="d-none d-xl-block">
+            <div className="wow fadeInUp">
+              <Image
+                src="/assets/images/demo-fancy/contact-section-image.png"
+                alt=""
+                style={{ width: "100%", height: 320 }}
+                width={225}
+                height={250}
+              />
             </div>
           </div>
-          {/* End Contact Information */}
+          {/* End Decorative Image */}
         </div>
         {/* End Left Column */}
         {/* Right Column */}
         <div className="col-lg-8 col-xl-7 offset-xl-1">
           <div className="position-relative">
-            {/* Decorative Image */}
-            <div className="decoration-11 d-none d-xl-block">
-              <div className="wow fadeInUp">
-                <Image
-                  src="/assets/images/demo-fancy/contact-section-image.png"
-                  width={225}
-                  height={250}
-                  alt=""
-                />
-              </div>
-            </div>
-            {/* End Decorative Image */}
             <div className="box-shadow round p-4 p-sm-5">
               <h4 className="h3 mb-30">Get in Touch</h4>
               {/* Contact Form */}
               <form
-                onSubmit={(e) => e.preventDefault()}
-                className="form contact-form"
                 id="contact_form"
+                onSubmit={onFormSubmit}
+                className="form contact-form"
               >
                 <div className="row">
                   <div className="col-md-6">
@@ -155,8 +143,11 @@ export default function Contact() {
                     <div className="form-tip w-100 pt-3 mt-sm-20">
                       <i className="icon-info size-16" />
                       All the fields are required. By sending the form you agree
-                      to the <a href="#">Terms &amp; Conditions</a> and{" "}
-                      <a href="#">Privacy Policy</a>.
+                      to the{" "}
+                      <Link href="/terms-and-conditions">
+                        Terms &amp; Conditions
+                      </Link>{" "}
+                      and <Link href="/privacy-policy">Privacy Policy</Link>.
                     </div>
                     {/* End Inform Tip */}
                   </div>

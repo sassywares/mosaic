@@ -2,6 +2,30 @@
 import React from "react";
 import Image from "next/image";
 export default function Newsletter() {
+  async function onFormSubmit(e) {
+    e.preventDefault();
+
+    const email = e.target["newsletter-email"].value;
+
+    if (!email) {
+      alert("Please enter your email");
+      return;
+    }
+
+    alert(
+      "Thank you for subscribing, be prepared for hot new cookies in your inbox every week."
+    );
+
+    try {
+      await fetch("https://api.sassywares.com/newsletter", {
+        body: JSON.stringify({ email }),
+        method: "POST",
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className="container">
       <div className="row">
@@ -44,17 +68,13 @@ export default function Newsletter() {
           <div className="w-100">
             <h2 className="section-caption-fancy mb-20 mb-xs-10">Newsletter</h2>
             <h3 className="section-title-small mb-30">
-              Stay always informed with our weekly newsletter.
+              Sync with hot new things in the world of design.
             </h3>
             <p className="section-descr mb-30">
-              Get special offers and fresh solutions from the market leaders
-              that will help to jumpstart your business.
+              Whether you're looking into our services or just want to stay in
+              loop with the world of design, we've got you covered.
             </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              id="mailchimp"
-              className="form"
-            >
+            <form onSubmit={onFormSubmit} className="form">
               <div className="d-sm-flex justify-content-between mb-3">
                 <label htmlFor="newsletter-email" className="visually-hidden">
                   Your email

@@ -6,13 +6,11 @@ import { fancyOnepage } from "@/data/menu";
 import Image from "next/image";
 
 export const metadata = {
-  title:
-    "Home 6 Main Demo Onepage || Resonance &mdash; One & Multi Page React Nextjs Creative Template",
-  description:
-    "Resonance &mdash; One & Multi Page React Nextjs Creative Template",
+  title: "Mosaic digital",
+  description: "We make beautiful websites for you",
 };
 
-export default function Home6MainDemoOnepage() {
+export default function HomePage() {
   return (
     <>
       <div className="theme-fancy">

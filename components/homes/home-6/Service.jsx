@@ -18,6 +18,7 @@ const ServiceItem = ({ src, title, text }) => (
     </div>
   </div>
 );
+
 export default function Service() {
   return (
     <>

@@ -1,7 +1,6 @@
 export const footerLinks = [
-  { name: "Privacy Policy", path: "#" },
-  { name: "Terms & Conditions", path: "#" },
-  { name: "Presskit", path: "#" },
+  { name: "Privacy Policy", path: "/privacy-policy" },
+  { name: "Terms & Conditions", path: "/terms-and-conditions" },
 ];
 
 export const footerLinks2 = [
@@ -52,6 +51,5 @@ export const navigationLinks = [
   { href: "#about", text: "About" },
   { href: "#services", text: "Services" },
   { href: "#portfolio", text: "Portfolio" },
-  { href: "#blog", text: "Blog" },
   { href: "#contact", text: "Contact" },
 ];

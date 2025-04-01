@@ -1,8 +1,10 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
-import FooterSocials from "./FooterSocials";
 import { footerLinks, navigationLinks } from "@/data/footer";
+import Link from "next/link";
+import { services3 } from "@/data/services";
 
 export default function Footer6() {
   const scrollToTop = (event) => {
@@ -25,18 +27,7 @@ export default function Footer6() {
               height={35}
             />
           </div>
-          <p>
-            Integer auctor aliquet martor, sed lorem malesuada eros blandit
-            eget. Proin lacinia mortoc id odio vestibulum.
-          </p>
-          <div className="clearlinks">
-            <strong>T.</strong>
-            <a href="tel:+18376528800">+1 837 652 8800</a>
-          </div>
-          <div className="clearlinks">
-            <strong>E.</strong>
-            <a href="mailto:ibthemes21@gmail.com">ibthemes21@gmail.com</a>
-          </div>
+          <p>We make warm websites for you</p>
         </div>
         <div className="col-lg-7 offset-lg-2">
           <div className="row mt-n30">
@@ -54,9 +45,13 @@ export default function Footer6() {
             {/* End Footer Widget */}
             {/* Footer Widget */}
             <div className="col-sm-4 mt-30">
-              <h3 className="fw-title">Social Media</h3>
+              <h3 className="fw-title">Services</h3>
               <ul className="fw-menu clearlist">
-                <FooterSocials />
+                {services3.map((service) => (
+                  <li key={service.title}>
+                    <a href="#">{service.title}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             {/* End Footer Widget */}
@@ -66,7 +61,7 @@ export default function Footer6() {
               <ul className="fw-menu clearlist">
                 {footerLinks.map((elm, i) => (
                   <li key={i}>
-                    <a href={elm.path}>{elm.name}</a>
+                    <Link href={elm.path}>{elm.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -78,14 +73,13 @@ export default function Footer6() {
       {/* Footer Text */}
       <div className="row text-gray">
         <div className="col-md-4 col-lg-3">
-          <b>© IB-Themes {new Date().getFullYear()}.</b>
+          <b>© Mosaic Digital {new Date().getFullYear()}.</b>
         </div>
         <div className="col-md-7 offset-md-1 offset-lg-2 clearfix">
-          <b>Based in London, United Kingdom.</b>
           {/* Back to Top Link */}
           <div
-            className="local-scroll float-end mt-n20 mt-sm-10"
             onClick={scrollToTop}
+            className="local-scroll float-end mt-n20 mt-sm-10"
           >
             <a href="#top" className="link-to-top">
               <i className="mi-arrow-up size-24" />

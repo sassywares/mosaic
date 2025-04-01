@@ -46,12 +46,12 @@ export default function Features() {
               Why Choose Us?
             </h2>
             <h3 className="section-title-small mb-30">
-              We use the power of design to solve complex problems.
+              We care for your brand just like we care for our own.
             </h3>
             <p className="section-descr mb-30">
-              There are two primary jobs involved in creating a website the web
-              designer and web developer, who often work closely together on a
-              website.
+              Your brand is your identity — With us, you're not just getting a
+              website, you're getting a partner who will help you grow to the
+              next level.
             </p>
             {/* Features List */}
             <div className="row features-list">

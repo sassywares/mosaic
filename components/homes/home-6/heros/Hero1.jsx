@@ -18,19 +18,19 @@ export default function Hero1() {
                   className="section-caption-fancy mb-30 mb-xs-20 wow fadeInUp"
                   data-wow-duration="1.2s"
                 >
-                  Resonance Web Studio
+                  Mosaic digital
                 </h2>
                 <h1 className="hs-title-10 mb-30">
                   <span className="wow charsAnimIn" data-splitting="chars">
-                    Make your{" "}
+                    We make{" "}
                     <span className="mark-decoration-3-wrap color-secondary-1-white">
-                      beautiful
+                      warm
                       <b
                         className="mark-decoration-3 wow scalexIn"
                         data-wow-delay="1.1s"
                       />
                     </span>{" "}
-                    web presence easily
+                    websites for you
                   </span>
                 </h1>
                 <p
@@ -39,9 +39,8 @@ export default function Hero1() {
                   data-wow-duration="1.2s"
                   data-wow-offset={0}
                 >
-                  We are an award winning studio specializing in branding,
-                  design and engineering. Our mission is to make work process
-                  meaningful.
+                  Getting a website for your business should be easy and fun.
+                  That's what we do at Mosaic.
                 </p>
                 <div
                   className="local-scroll wow fadeInUp wch-unset"
@@ -55,24 +54,14 @@ export default function Hero1() {
                     <span>Discover now</span>
                   </a>{" "}
                   <a
-                    onClick={() => setOpen(true)}
+                    href="#contact"
                     className="btn btn-mod btn-border-c btn-white-c btn-large btn-round mb-xs-10 lightbox mfp-iframe"
                     data-btn-animate="y"
                   >
                     <span className="btn-animate-y">
-                      <span className="btn-animate-y-1">
-                        <i
-                          className="icon-play size-13 me-1"
-                          aria-hidden="true"
-                        ></i>{" "}
-                        How we work?
-                      </span>
+                      <span className="btn-animate-y-1">Get in touch</span>
                       <span className="btn-animate-y-2" aria-hidden="true">
-                        <i
-                          className="icon-play size-13 me-1"
-                          aria-hidden="true"
-                        ></i>{" "}
-                        How we work?
+                        Get in touch
                       </span>
                     </span>
                   </a>

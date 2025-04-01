@@ -4,7 +4,6 @@ import Service from "./Service";
 import Features from "./Features";
 import Portfolio from "./Portfolio";
 import Testimonials from "./Testimonials";
-import Blog from "./Blog";
 import Newsletter from "./Newsletter";
 import Pricing from "./Pricing";
 import Contact from "./Contact";
@@ -26,16 +25,15 @@ export default function Home6({ onePage = false, dark = false }) {
             <div className="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
               <h2 className="section-caption-fancy mb-20 mb-xs-10">About Us</h2>
               <h3 className="section-title mb-30 mb-xs-20 wow fadeInUp">
-                The best way to create stanning layouts for your website.
+                The warmest way to get your business online.
               </h3>
               <p
                 className="section-descr mb-40 mb-sm-20 wow fadeInUp"
                 data-wow-delay="0.06s"
               >
-                Although web design has a fairly recent history. It has become a
-                large part of people's everyday lives. It is hard to imagine the
-                Internet without animated graphics, different styles of
-                typography, background, videos and music.
+                We make websites for creative businesses. We're a small team of
+                designers and engineers passionate about creating websites and
+                streamlining the process of creating websites.
               </p>
               <div className="local-scroll wow fadeInUp" data-wow-delay="0.12s">
                 {onePage ? (
@@ -115,7 +113,7 @@ export default function Home6({ onePage = false, dark = false }) {
                 Our Services
               </h2>
               <h3 className="section-title mb-0 mb-sm-20">
-                We provide the full stack of&nbsp;the best digital solutions.
+                We provide the full stack of&nbsp;the hottest solutions.
               </h3>
             </div>
             <div className="col-md-4 col-lg-6 d-flex align-items-end">
@@ -217,14 +215,14 @@ export default function Home6({ onePage = false, dark = false }) {
         {dark ? <TestimonialsDark /> : <Testimonials />}
       </section>
       <hr className={`mt-0 mb-0 ${dark ? "white" : ""}`} />
-      <section
+      {/* <section
         className={`page-section  scrollSpysection  ${
           dark ? "bg-dark-1 light-content" : ""
         } `}
         id="blog"
       >
         <Blog />
-      </section>
+      </section> */}
 
       <hr className={`mt-0 mb-0 ${dark ? "white" : ""}`} />
 
