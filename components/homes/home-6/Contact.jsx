@@ -32,9 +32,13 @@ export default function Contact() {
     alert("Thank you for contacting us. We will get back to you soon.");
 
     try {
-      await fetch("https://api.sassywares.com/contact", {
+      await fetch("https://api.sassywares.com/v1/contact", {
         body: JSON.stringify({ name, email, message }),
         method: "POST",
+        headers: {
+          "X-Source": "mosaic-digital-agency",
+          "Content-Type": "application/json",
+        },
       });
     } catch (error) {
       console.error(error);

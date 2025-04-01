@@ -17,9 +17,13 @@ export default function Newsletter() {
     );
 
     try {
-      await fetch("https://api.sassywares.com/newsletter", {
+      await fetch("https://api.sassywares.com/v1/newsletter", {
         body: JSON.stringify({ email }),
         method: "POST",
+        headers: {
+          "X-Source": "mosaic-digital-agency",
+          "Content-Type": "application/json",
+        },
       });
     } catch (error) {
       console.error(error);
