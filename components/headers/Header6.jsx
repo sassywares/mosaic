@@ -15,17 +15,17 @@ export default function Header6({ links }) {
       <div className="nav-logo-wrap position-static local-scroll">
         <Link href="/" className="logo">
           <Image
-            src="/assets/images/demo-fancy/logo-dark.png"
+            src="/assets/favicon.png"
             alt="Mosaic digital Logo"
-            width={154}
-            height={35}
+            width={40}
+            height={40}
             className="light-mode-logo"
           />
           <Image
-            src="/assets/images/demo-fancy/logo-white.png"
+            src="/assets/favicon.png"
             alt="Mosaic digital Logo"
-            width={154}
-            height={35}
+            width={40}
+            height={40}
             className="dark-mode-logo"
           />
         </Link>

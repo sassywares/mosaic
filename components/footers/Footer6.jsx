@@ -21,10 +21,11 @@ export default function Footer6() {
         <div className="col-lg-3 text-gray mb-md-50">
           <div className="mb-30">
             <Image
-              src="/assets/images/demo-fancy/logo-white.png"
-              alt="Your Company Logo"
-              width={154}
-              height={35}
+              src="/assets/favicon.png"
+              alt="Mosaic digital Logo"
+              style={{ filter: "invert(1)" }}
+              width={40}
+              height={40}
             />
           </div>
           <p>We make warm websites for you</p>
