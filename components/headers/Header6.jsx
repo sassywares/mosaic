@@ -1,10 +1,11 @@
 "use client";
+
 import { toggleMobileMenu } from "@/utlis/toggleMobileMenu";
 import Nav from "./components/Nav";
 
 import Image from "next/image";
-import LanguageSelect from "./components/LanguageSelect";
 import Link from "next/link";
+
 export default function Header6({ links }) {
   return (
     <div className="main-nav-sub container">
@@ -12,7 +13,7 @@ export default function Header6({ links }) {
               If you use a PNG logo image, the image resolution must be equal 200% of the visible logo
               image size for support of retina screens. See details in the template documentation. *) */}
       <div className="nav-logo-wrap position-static local-scroll">
-        <a href="#top" className="logo">
+        <Link href="/" className="logo">
           <Image
             src="/assets/images/demo-fancy/logo-dark.png"
             alt="Mosaic digital Logo"
@@ -27,7 +28,7 @@ export default function Header6({ links }) {
             height={35}
             className="dark-mode-logo"
           />
-        </a>
+        </Link>
       </div>
       {/* Mobile Menu Button */}
       <div

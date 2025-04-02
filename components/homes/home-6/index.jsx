@@ -116,65 +116,6 @@ export default function Home6({ onePage = false, dark = false }) {
                 We provide the full stack of&nbsp;the hottest solutions.
               </h3>
             </div>
-            <div className="col-md-4 col-lg-6 d-flex align-items-end">
-              <div className="local-scroll text-md-end w-100">
-                {onePage ? (
-                  <>
-                    {" "}
-                    <a
-                      href="#portfolio"
-                      className="link-hover-anim"
-                      data-link-animate="y"
-                    >
-                      <span className="link-strong link-strong-unhovered">
-                        View works{" "}
-                        <i
-                          className="mi-arrow-right size-24"
-                          aria-hidden="true"
-                        ></i>
-                      </span>
-                      <span
-                        className="link-strong link-strong-hovered"
-                        aria-hidden="true"
-                      >
-                        View works{" "}
-                        <i
-                          className="mi-arrow-right size-24"
-                          aria-hidden="true"
-                        ></i>
-                      </span>
-                    </a>
-                  </>
-                ) : (
-                  <>
-                    {" "}
-                    <Link
-                      href={`/fancy-services${dark ? "-dark" : ""}`}
-                      className="link-hover-anim"
-                      data-link-animate="y"
-                    >
-                      <span className="link-strong link-strong-unhovered">
-                        ALl services{" "}
-                        <i
-                          className="mi-arrow-right size-24"
-                          aria-hidden="true"
-                        ></i>
-                      </span>
-                      <span
-                        className="link-strong link-strong-hovered"
-                        aria-hidden="true"
-                      >
-                        ALl services{" "}
-                        <i
-                          className="mi-arrow-right size-24"
-                          aria-hidden="true"
-                        ></i>
-                      </span>
-                    </Link>
-                  </>
-                )}
-              </div>
-            </div>
           </div>
           {/* Services Grid */}
 

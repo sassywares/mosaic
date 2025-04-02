@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 export default function Newsletter() {
   async function onFormSubmit(e) {
     e.preventDefault();
@@ -103,8 +104,9 @@ export default function Newsletter() {
               </div>
               <div className="form-tip">
                 <i className="icon-info size-16" /> By sending the form you
-                agree to the <a href="#">Terms &amp; Conditions</a> and{" "}
-                <a href="#">Privacy Policy</a>.
+                agree to the{" "}
+                <Link href="/terms-and-conditions">Terms &amp; Conditions</Link>{" "}
+                and <Link href="/privacy-policy">Privacy Policy</Link>.
               </div>
               <div
                 id="subscribe-result"
