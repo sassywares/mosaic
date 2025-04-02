@@ -74,10 +74,14 @@ export default function Hero1() {
               <div className="w-100 wow fadeInLeft" data-wow-delay="0.7s">
                 <div className="position-relative mt-40 mb-20">
                   <Image
-                    src="/assets/images/demo-fancy/hs-image.png"
+                    src="/assets/images/woman-working-on-a-computer.png"
+                    alt="Woman working on a computer"
+                    style={{
+                      height: 500,
+                      objectFit: "contain",
+                    }}
                     width={1200}
                     height={678}
-                    alt="Image Description"
                     className="w-100"
                   />
                   {/* Decorative Waves */}
@@ -95,26 +99,6 @@ export default function Hero1() {
                     />
                   </div>
                   {/* End Decorative Waves */}
-                </div>
-                <div className="small text-gray text-center">
-                  Illustration by
-                  <a
-                    href="https://icons8.com/illustrations/author/TQQ1qAnr9rn5"
-                    rel="noopener nofollow"
-                    target="_blank"
-                  >
-                    {" "}
-                    Oleg Shcherba
-                  </a>{" "}
-                  from{" "}
-                  <a
-                    href="https://icons8.com/illustrations"
-                    rel="noopener nofollow"
-                    target="_blank"
-                  >
-                    Ouch
-                  </a>
-                  !
                 </div>
               </div>
             </div>

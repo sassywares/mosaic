@@ -5386,8 +5386,8 @@ a.logo:hover {
 }
 .decoration-5 {
   position: absolute;
-  bottom: 50px;
-  right: -55px;
+  bottom: 100px;
+  right: 75px;
   color: var(--color-dark-1);
   pointer-events: none;
 }

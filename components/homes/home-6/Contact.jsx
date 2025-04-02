@@ -58,11 +58,15 @@ export default function Contact() {
           <div className="d-none d-xl-block">
             <div className="wow fadeInUp">
               <Image
-                src="/assets/images/demo-fancy/contact-section-image.png"
-                alt=""
-                style={{ width: "100%", height: 320 }}
-                width={225}
-                height={250}
+                src="/assets/images/man-and-woman-chatting.png"
+                alt="Man and woman chatting"
+                style={{
+                  width: "100%",
+                  height: 375,
+                  objectFit: "contain",
+                }}
+                width={410}
+                height={375}
               />
             </div>
           </div>

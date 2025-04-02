@@ -10,31 +10,16 @@ export default function Features() {
           <div className="w-100">
             <div className="mb-20">
               <Image
-                src="/assets/images/demo-fancy/section-image-7.png"
-                alt="Image Description"
+                src="/assets/images/man-riding-a-rocket.png"
+                alt="Man riding a rocket"
+                style={{
+                  height: 600,
+                  objectFit: "contain",
+                }}
                 width={1200}
                 height={658}
                 className="w-100"
               />
-            </div>
-            <div className="small text-gray text-center">
-              Illustration by{" "}
-              <a
-                href="https://icons8.com/illustrations/author/TQQ1qAnr9rn5"
-                rel="noopener nofollow"
-                target="_blank"
-              >
-                Oleg Shcherba{" "}
-              </a>
-              from{" "}
-              <a
-                href="https://icons8.com/illustrations"
-                rel="noopener nofollow"
-                target="_blank"
-              >
-                Ouch
-              </a>
-              !
             </div>
           </div>
         </div>
