@@ -8412,7 +8412,6 @@ a.portfolio-5-link:hover .portfolio-5-title span {
 
 .composition-2 {
   position: relative;
-  overflow: hidden;
   isolation: isolate;
 }
 .composition-2 img {
@@ -8425,7 +8424,7 @@ a.portfolio-5-link:hover .portfolio-5-title span {
   overflow: hidden;
   border-radius: var(--border-radius-default);
   isolation: isolate;
-  transform: translateZ(0);
+  transform: translate3d(-25px, 0, 0);
 }
 .composition-2-image-2 {
   position: relative;
@@ -8435,7 +8434,7 @@ a.portfolio-5-link:hover .portfolio-5-title span {
   overflow: hidden;
   border-radius: var(--border-radius-default);
   isolation: isolate;
-  transform: translateZ(0);
+  transform: translate3d(25px, 0, 0);
 }
 .composition-2-decoration {
   position: absolute;

@@ -8,18 +8,18 @@ export default function About() {
           <div className="composition-1">
             <div className="composition-1-image-1">
               <Image
-                src="/assets/images/demo-fancy/section-image-1.jpg"
+                src="/assets/images/man-working-on-laptop.png"
                 width={480}
                 height={358}
-                alt="Image Description"
+                alt="Man working on laptop"
               />
             </div>
             <div className="composition-1-image-2">
               <Image
-                src="/assets/images/demo-fancy/section-image-2.jpg"
+                src="/assets/images/woman-listening-to-music.png"
                 width={440}
                 height={330}
-                alt="Image Description"
+                alt="Woman listening to music"
               />
             </div>
             <div
@@ -56,16 +56,16 @@ export default function About() {
           <div className="composition-2">
             <div className="composition-2-image-1 mt-xs-0">
               <Image
-                src="/assets/images/demo-fancy/section-image-3.jpg"
+                src="/assets/images/boy-working-on-laptop.png"
                 width={372}
                 height={500}
-                alt="Image Description"
+                alt="Boy working on laptop"
               />
             </div>
             <div className="composition-2-image-2">
               <Image
-                src="/assets/images/demo-fancy/section-image-4.jpg"
-                alt="Image Description"
+                src="/assets/images/woman-working-on-laptop.png"
+                alt="Woman working on laptop"
                 width={440}
                 height={330}
               />
@@ -91,18 +91,18 @@ export default function About() {
           <div className="composition-3">
             <div className="composition-3-image-1">
               <Image
-                src="/assets/images/demo-fancy/section-image-6.jpg"
+                src="/assets/images/boy-working-on-tablet.png"
                 width={500}
                 height={372}
-                alt="Image Description"
+                alt="Boy working on tablet"
               />
             </div>
             <div className="composition-3-image-2">
               <Image
-                src="/assets/images/demo-fancy/section-image-5.jpg"
+                src="/assets/images/girl-working-on-dashboard.png"
                 width={440}
                 height={330}
-                alt="Image Description"
+                alt="Girl working on dashboard"
               />
             </div>
             <div
