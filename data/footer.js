@@ -48,8 +48,8 @@ export const socialMediaLinks = [
 ];
 
 export const navigationLinks = [
-  { href: "#about", text: "About" },
-  { href: "#services", text: "Services" },
-  { href: "#portfolio", text: "Portfolio" },
-  { href: "#contact", text: "Contact" },
+  { href: "/#about", text: "About" },
+  { href: "/#services", text: "Services" },
+  { href: "/#portfolio", text: "Portfolio" },
+  { href: "/#contact", text: "Contact" },
 ];

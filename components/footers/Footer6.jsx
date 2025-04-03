@@ -50,7 +50,7 @@ export default function Footer6() {
               <ul className="fw-menu clearlist">
                 {services3.map((service) => (
                   <li key={service.title}>
-                    <a href="#">{service.title}</a>
+                    <a href="/#services">{service.title}</a>
                   </li>
                 ))}
               </ul>
