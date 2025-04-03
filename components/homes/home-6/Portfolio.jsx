@@ -83,9 +83,14 @@ export default function Portfolio() {
                             <Image
                               ref={ref}
                               src={item.imgSrc}
+                              alt="Work Description"
+                              style={{
+                                width: "100%",
+                                height: 240,
+                                objectFit: "cover",
+                              }}
                               width={746}
                               height={524}
-                              alt="Work Description"
                             />
                           </div>
                           <div className="work-intro text-start">
@@ -100,9 +105,14 @@ export default function Portfolio() {
                       <div className="work-img">
                         <Image
                           src={item.imgSrc}
+                          alt="Work Description"
+                          style={{
+                            width: "100%",
+                            height: 240,
+                            objectFit: "cover",
+                          }}
                           width={746}
                           height={524}
-                          alt="Work Description"
                         />
                       </div>
                       <div className="work-intro text-start">

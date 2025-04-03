@@ -324,17 +324,17 @@ export const portfolios6 = [
   {
     id: 36,
     categories: ["web-development", "frontend"],
-    imgSrc: "/assets/images/demo-fancy/portfolio/project-1.jpg",
+    imgSrc: "/assets/images/portfolio/horizon-ecommerce.jpg",
     title: "Horizon E-Commerce",
     description:
       "Responsive online store with seamless checkout experience powered by Stripe and ClickFunnels.",
     lightbox: true,
-    lightboxLink: "/assets/images/demo-fancy/portfolio/project-1-large.jpg",
+    lightboxLink: "/assets/images/portfolio/portfolio/project-1-large.jpg",
   },
   {
     id: 37,
     categories: ["branding", "ui-design"],
-    imgSrc: "/assets/images/demo-fancy/portfolio/project-2.jpg",
+    imgSrc: "/assets/images/portfolio/lopez-international.jpg",
     title: "Lopez International",
     description:
       "Modern financial platform with intuitive dashboard interface powered by Mosaic's own Custom Design System.",
@@ -344,7 +344,7 @@ export const portfolios6 = [
   {
     id: 38,
     categories: ["branding", "identity"],
-    imgSrc: "/assets/images/demo-fancy/portfolio/project-3.jpg",
+    imgSrc: "/assets/images/portfolio/artisan-cafe.jpg",
     title: "Artisan Cafe",
     description:
       "Distinctive visual identity and responsive website for a local Puerto Rican cafe in the heart of the city.",
@@ -354,7 +354,7 @@ export const portfolios6 = [
   {
     id: 39,
     categories: ["ui-design", "web-development"],
-    imgSrc: "/assets/images/demo-fancy/portfolio/project-4.jpg",
+    imgSrc: "/assets/images/portfolio/pulse-fitness.jpg",
     title: "Pulse Fitness",
     description:
       "Member portal with workout tracking and class scheduling features powered by Mosaic's own Extensive Design System.",
@@ -364,7 +364,7 @@ export const portfolios6 = [
   {
     id: 40,
     categories: ["mobile-design"],
-    imgSrc: "/assets/images/demo-fancy/portfolio/project-5.jpg",
+    imgSrc: "/assets/images/portfolio/nomad-travels.jpg",
     title: "Nomad Travels",
     description:
       "Travel planning app with immersive destination exploration powered by AirBnb and Google Maps",
@@ -374,7 +374,7 @@ export const portfolios6 = [
   {
     id: 41,
     categories: ["ui-design", "design-system"],
-    imgSrc: "/assets/images/demo-fancy/portfolio/project-6.jpg",
+    imgSrc: "/assets/images/portfolio/mosaic-design-system.png",
     title: "Mosaic Design System",
     description:
       "Comprehensive UI component library built in-house by the best of talent for consistent brand experiences.",

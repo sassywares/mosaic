@@ -105,14 +105,14 @@ export default function Pricing() {
                     <div className="pricing-item">
                       <div className="pricing-item-inner round">
                         <div className="pricing-wrap">
-                          <div className="pricing-icon">
+                          {/* <div className="pricing-icon">
                             <Image
                               src={elm.image}
                               width={110}
                               height={110}
                               alt="Image Description"
                             />
-                          </div>
+                          </div> */}
                           <h4 className="pricing-title">{elm.title}</h4>
                           <div className="pricing-num">
                             <sup>$</sup>
