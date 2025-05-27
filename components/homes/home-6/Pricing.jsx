@@ -1,4 +1,5 @@
 "use client";
+import { config } from "@/config";
 import { pricing } from "@/data/pricing";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -138,8 +139,7 @@ export default function Pricing() {
                           </div>
                           <div className="mt-auto local-scroll">
                             <a
-                              href={`https://sassywares.com/pricing?plan=${elm.title}&utm_source=mosaic-digital-agency&utm_medium=website`}
-                              target="_blank"
+                              onClick={() => alert("Coming soon!")}
                               className="btn btn-mod btn-color btn-medium btn-round btn-hover-anim btn-full"
                             >
                               <span>Buy {elm.title}</span>
