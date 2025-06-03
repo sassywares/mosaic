@@ -91,6 +91,17 @@ export default function Footer6() {
         </div>
       </div>
       {/* End Footer Text */}
+      <div className="d-flex gap-2 align-items-center justify-content-end mt-4">
+        Site by
+        <a href="https://sassywares.com" target="_blank" rel="noopener">
+          <img
+            src="https://storage.sassywares.com/badge.png"
+            alt="sassywares creative web design development agency"
+            width="150"
+            className="mt-2"
+          />
+        </a>
+      </div>
     </div>
   );
 }
